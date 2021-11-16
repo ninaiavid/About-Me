@@ -18,6 +18,8 @@ body {
     left: 0;
     background-color: #00382B;
     overflow-x: hidden;
+    color: #F4F3E8;
+
 }
 
 .sidenav a {
@@ -32,13 +34,14 @@ body {
     color: #F4F3E8;
 }
 
+.content {
+    padding-top: 10px;
+    width: 80%;
+}
+
 .content__main {
     margin-left: 200px;
     padding: 0 30px 30px 30px;
-}
-
-.content {
-    transition: 0.5s;
 }
 
 .languages td {   
@@ -48,3 +51,63 @@ body {
 .contact td:first-child {
     font-weight: bold;
 }
+
+.owner_name {
+    display: inline;
+}
+
+.menu {
+    padding-right: 10px;
+}
+
+.menu_main {
+    position: fixed;
+    background-color: #00382B;
+    color: #F4F3E8;
+    width: 767px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    display: none;
+}
+
+.menu_mini {
+    padding: 0; 
+    margin-top: -16px;
+}
+
+/**/
+
+.menu_link {
+    list-style: none;
+}
+
+.menu_link:hover .sidenav {
+    display: block;
+}
+
+.menu_link:hover .menu_main .owner_name {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .menu_main {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .sidenav {
+        display: none;
+    }
+    .owner_name {
+        font-size: 16px;
+    }
+    .content__main {
+        margin-left: 30px;
+        padding-top: 20px;
+    }
+    .content {
+        width: 100%;
+    }
+}
+/**/
